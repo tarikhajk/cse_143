@@ -26,7 +26,8 @@ public class ArrayIntList {
 		}
 	}
 	
-	public int length() {
+	// returns size of the list
+	public int size() {
 		return size;
 	}
 

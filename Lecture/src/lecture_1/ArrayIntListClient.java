@@ -11,10 +11,10 @@ public class ArrayIntListClient {
 		list1.add(97);
 		list2.add(7);
 		list2.add(-8);
-		System.out.println(list1 + " has size " + list1.length());
+		System.out.println(list1 + " has size " + list1.size());
 		System.out.println(list2);
 		
 		list1.remove(1);
-		System.out.println(list1 + " now has size " + list1.length());
+		System.out.println(list1 + " now has size " + list1.size());
 	}
 }
