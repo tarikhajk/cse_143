@@ -11,6 +11,16 @@ public class ArrayIntList {
 		elementData = new int[100];
 		size = 0;
 	}
+	
+	// pre: 0 <= size (throws IllegalArgumentException)
+	// post: constructs a list with a specific size
+	public ArrayIntList(int size) {
+		if (size < 0) {
+			throw new IllegalArgumentException();
+		}
+		elementData = new int[size];
+		size = 0;
+	}
 
 	// returns a comma-separated, bracketed version of the list
 	public String toString() {
@@ -26,6 +36,19 @@ public class ArrayIntList {
 		}
 	}
 	
+	// pre: 0 <= index < size() (throws IndexOutOfBoundsException if not)
+	// post: returns value at given index in the list
+	public int get(int index){
+		checkIndex(index);
+		return elementData[index];
+	}
+	
+	private void checkIndex(int index) {
+		if (index < 0 || index >= size) {
+			throw new IndexOutOfBoundsException();
+		}
+	}
+
 	// returns size of the list
 	public int size() {
 		return size;
